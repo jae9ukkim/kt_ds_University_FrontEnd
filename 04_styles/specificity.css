@@ -1,0 +1,17 @@
+/* 명시도에서 우선순위가 가장 낮은 태그 셀렉터 */
+div {
+  background-color: #ccc;
+  border: 3px dotted #f00;
+  color: #333;
+  font-weight: 700;
+  font-size: 32px;
+}
+/* 명시도에서 우선순위가 태그 다음으로 높은 클래스 셀렉터 */
+.tag-class {
+  font-size: 48px;
+  color: rgb(144, 26, 180);
+}
+/* 명시도에서 우선순위가 클래스 다음으로 높은 아이디 셀렉터 */
+#tag {
+  color: rgb(89, 0, 255);
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>External Style 실습</title>
+    <!-- Internal Style : 우선순위 => 두 번째로 높음(2) -->
+    <style type="text/css">
+      #header {
+        background-color: #f0f;
+        color: #ff0;
+      }
+    </style>
+
+    <!-- External Style : 우선순위 => 가장 낮음(3) -->
+    <link rel="stylesheet" type="text/css" href="./external.css" />
+  </head>
+  <body>
+    <div id="header" style="background-color: #000; color: #fff">
+      Header 영역
+      <p class="header--logo">로고 영역입니다.</p>
+    </div>
+    <div id="main-container">
+      Main-Container 영역
+      <p class="main-container--content">Content 영역</p>
+    </div>
+    <div id="footer">
+      Footer 영역
+      <ul class="footer-links">
+        <li class="footer-links--link">Item 1</li>
+        <li class="footer-links--link">Item 2</li>
+        <li class="footer-links--link">Item 3</li>
+      </ul>
+    </div>
+  </body>
+</html>
