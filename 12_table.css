@@ -1,0 +1,46 @@
+.grid {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+
+.grid > thead {
+  background-color: #fff;
+}
+
+.grid > thead > tr > th {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px dashed #ddd;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid > thead > tr > th:last-child {
+  border-right: 0;
+}
+
+.grid > tbody > tr:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+
+.grid > tbody > tr:hover {
+  background-color: #efefef;
+}
+
+.grid > tbody > tr > td {
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px dashed #ddd;
+  border-right: 1px dashed #ddd;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid > tbody > tr > td:last-child {
+  border-right: 0;
+}
