@@ -8,7 +8,7 @@ body {
   background-color: gray;
 }
 
-.root {
+.head {
   margin: 0 auto;
   width: 600px;
   height: 100%;
@@ -19,15 +19,56 @@ body {
 .div-yellow {
   background-color: rgb(255, 230, 0);
   padding: 5px 10px;
-  height: 20px;
+  height: 2.5rem;
 }
 
-.left {
+.logo {
   float: left;
+  background-image: url(./goodgag.1px.png);
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 2rem;
 }
 
 .right {
+  margin: 0;
   float: right;
+  list-style-type: none;
+}
+
+.right > li {
+  display: inline-block;
+}
+
+.pr {
+  background-color: #fed000;
+  border: 1.2px solid #e8af2b;
+  border-radius: 4px;
+  vertical-align: top;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.pr > img {
+  filter: invert(1) drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.25));  
+}
+
+.my {
+  background-image: url(./goodgag.1px.png);
+  background-repeat: no-repeat;
+  background-position: 0px -38px;
+
+  width: 2.5rem;
+  height: 2rem;
+}
+
+.write {
+  background-image: url(./goodgag.1px.png);
+  background-repeat: no-repeat;
+  background-position: -40px -38px;
+
+  width: 2.3rem;
+  height: 2rem;
 }
 
 .line-yellow {
