@@ -1,0 +1,24 @@
+.flex {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  /* height: 100vh; */
+  /* 수평 배치 */
+  flex-direction: row;
+  /* overflow 된 item들 wrap처리 */
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+
+.no-flex {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.no-flex > * {
+  font-size: 1rem;
+  display: inline-block;
+}
