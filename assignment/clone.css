@@ -14,16 +14,22 @@ body {
   height: 100%;
   border: 1px solid black;
   background-color: white;
+  font-size:0;
 }
 
 .div-yellow {
   background-color: rgb(255, 230, 0);
   padding: 5px 10px;
   height: 2.5rem;
+  position: relative;
+  vertical-align: middle;
 }
 
 .logo {
-  float: left;
+  /* float: left; */
+  position: absolute;
+  left: 0;
+  margin: 5px;
   background-image: url(./goodgag.1px.png);
   background-repeat: no-repeat;
   width: 5rem;
@@ -31,13 +37,17 @@ body {
 }
 
 .right {
-  margin: 0;
-  float: right;
+  margin: 5px;
+  padding-right: 10px;
+  /* float: right; */
+  position: absolute;
+  right: 0;
   list-style-type: none;
 }
 
 .right > li {
   display: inline-block;
+  margin: 2px;
 }
 
 .pr {
