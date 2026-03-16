@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+.grid-layout {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 100px minmax(300px, auto) 100px;
+  grid-template-rows: 100px 1fr 5px 100px;
+  gap: 10px;
+  text-align: center;
+}
+
+.header,
+.space,
+.footer {
+  grid-column: 1 / 4;
+}
+
+.header {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar1,
+.sidebar2 {
+  background-color: brown;
+}
+
+.content {
+  background-color: blueviolet;
+}
+
+.space {
+  background-color: chocolate;
+}
+
+.footer {
+  display: flex;
+  background-color: aquamarine;
+  justify-content: center;
+  align-items: center;
+}

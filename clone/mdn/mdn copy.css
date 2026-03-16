@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  /* margin: 0; */
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  height: 4.125rem;
+  background-color: white;
+}
+
+.navigation {
+  display: flex;
+  margin: 0 auto;
+  width: 1400px;
+  justify-content: space-between;
+}
+
+.navigation > .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > img {
+  width: 83px;
+  height: 24px;
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  align-items: center;
+}
+
+.menu > li {
+  display: flex;
+  padding: 8px 11px;
+  align-items: center;
+}
+
+.menu > li > img {
+  height: 20px;
+}
+
+.menu > li > span {
+  display: flex;
+  text-wrap: nowrap;
+}
+
+.menu > li:not(:last-child) > span::after {
+  content: url("https://developer.mozilla.org/static/client/chevron-down.7c923b7054da305b.svg");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.menu > li > span > a:link {
+  color: #000;
+}
+
+.menu > li > span > a:visited {
+  color: #000;
+}
+
+.navigation > div:last-child {
+  display: flex;
+  width: 150px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  width: 5rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs-bar {
+  display: flex;
+  background-color: #f7f7f8;
+  border-top: 1px solid #c3c7cb;
+  border-bottom: 1px solid #c3c7cb;
+  justify-content: space-evenly;
+}
+
+.breadcrumbs-bar > div {
+  display: flex;
+  align-items: center;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  /* width: 100%; */
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  /* background-color: #f009; */
+}
+
+.left-sidebar {
+  position: sticky;
+  /* top: 5.125rem; */
+  top: 100px;
+  flex-basis: 270px;
+  /* height: 100%; */
+  /* height: calc(100vh - 5.125rem); */
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+.left-sidebar > div {
+  padding: 8px 32px 8px 0px;
+}
+
+.left-sidebar > div > input {
+  position: sticky;
+  top: 6.125rem;
+  border: 1px solid #c3c7cb;
+  border-radius: 9999px;
+  background-image: url("https://developer.mozilla.org/static/ssr/filter.b77a4ccbfb57e2ef.svg");
+  background-repeat: no-repeat;
+  background-position: 8px 50%;
+  padding: 0.3rem 4.2rem 0.3rem 2.2rem;
+  width: 100%;
+}
+
+.left-sidebar > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-sidebar > ul > .section {
+  font-weight: 600;
+}
+
+.left-sidebar > ul > li:not(.section) {
+  padding-left: 1rem;
+}
+
+summary {
+  list-style-type: none;
+}
+
+.left-sidebar > ul > li > details > summary::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url("https://developer.mozilla.org/static/client/chevron-right.a81fc439dd5e4839.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: calc(1rem * 0.2 * -1);
+  margin-right: calc(1rem * 0.15);
+}
+
+.left-sidebar > ul > li > details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.left-sidebar > ul > li > details > ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.left-sidebar > ul > li > details > ul > li > img {
+  width: 16px;
+  height: 16px;
+}
+
+.center-content {
+  height: 100%;
+  width: 700px;
+  margin-left: 280px;
+}
+
+.center-content > .translation-banner {
+  background-color: #a4cef2;
+  border-left: 2px solid #072446;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.center-content > .translation-banner > p > img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+table {
+  display: table;
+  border-collapse: collapse;
+  text-indent: initial;
+  border: 1px solid gray;
+  border-spacing: 2px;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border: 1px solid gray;
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+  border: 1px solid gray;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+  border: 1px solid gray;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+.right-sidebar {
+  position: sticky;
+  top: 5.125rem;
+  right: 450px;
+  width: 210px;
+  height: 100%;
+  overflow: auto;
+}
+
+.right-sidebar > ul {
+  list-style-type: none;
+  padding: 0;
+}
