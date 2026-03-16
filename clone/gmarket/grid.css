@@ -2,19 +2,115 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .grid-layout {
+  margin: 0 auto;
+  max-width: 72rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 36rem 36rem;
   grid-template-rows: 1.875rem 13.75rem 2.5rem 23.75rem 1.5rem 3.375rem;
+  gap: 1.25rem;
 }
 
 .title {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.tab-menu > ul {
+.title > a {
+  text-decoration: none;
+  color: #777;
+  display: flex;
+  align-items: center;
+}
+
+.title > a::after,
+.more-item > a::after {
+  display: inline-block;
+  content: "";
+  background-image: url("https://pics.gmarket.co.kr/pc/sprite/kr/homemain/sprite__homemain.svg");
+  background-repeat: no-repeat;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: 0 -2.75rem;
+  margin-left: 0.15rem;
+}
+
+.emart {
+  background-color: #ffcf03;
+}
+
+.delivery {
+  background-color: #1b9cff;
+}
+
+.box-info {
+  height: 222px;
+  width: 35rem;
+  border-radius: 10px;
+}
+
+.tab-menu {
+  display: flex;
+  align-items: center;
+}
+
+.tab-menu {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style-type: none;
+}
+
+.tab-menu > li {
+  flex-grow: 1;
+  height: 2.5rem;
+  color: #666;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-menu > li:not(:first-child)::before {
+  content: "|";
+  position: absolute;
+  left: 0;
+}
+
+.grid-layout > .tab-menu > li > a:hover {
+  font-weight: bold;
+  color: #fff;
+}
+
+.grid-layout > .left-tab > li > a:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  right: 2rem;
+  background-color: #00c400;
+  border-radius: 1.25rem;
+  z-index: -1;
+}
+
+.right-tab > li > a:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5rem;
+  right: 5rem;
+  background-color: #be00c4;
+  border-radius: 1.25rem;
+  z-index: -1;
 }
 
 .item-list {
@@ -23,8 +119,23 @@
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+.item-list > div:nth-child(1),
+.item-list > div:nth-child(4),
+.item-list > div:nth-child(5) {
+  background-color: #777;
+}
+
 .more-item {
   border: 1px solid rgb(0, 0, 0.1);
   border-radius: 1.6875rem;
   background-color: #fafafa;
+  color: #444;
+  text-align: center;
+  line-height: 51px;
+}
+
+.more-item > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
