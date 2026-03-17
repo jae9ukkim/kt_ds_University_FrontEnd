@@ -10,6 +10,7 @@ body {
   background-color: #484646;
   margin: 0;
   height: 100vh;
+  /* font-family: "Nanum Brush Script", cursive; */
 }
 
 .wrapper {
@@ -94,6 +95,7 @@ body {
   flex-direction: column;
   flex-grow: 1;
   background-color: white;
+  font-family: "Nanum Brush Script", cursive;
 }
 
 .articles > .article {

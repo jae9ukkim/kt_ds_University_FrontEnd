@@ -1,0 +1,99 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 31.25rem;
+  margin: 0 auto;
+  gap: 0.625rem;
+}
+
+input,
+select {
+  border: 0;
+}
+
+input,
+select:focus {
+  outline: 0;
+}
+
+.form > .basic-info {
+  display: grid;
+  grid-template-columns: 3.125rem 1fr minmax(3.125rem, auto);
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.form > .basic-info > label,
+.form > .personal-info > label,
+.form > .tel-info > label {
+  text-align: center;
+}
+
+.form > .basic-info > label:not(:last-of-type),
+.form > .basic-info > input:not(:last-of-type),
+.form > .basic-info > span:not(:last-of-type),
+.form > .personal-info > label,
+.form > .personal-info > input,
+.form > .personal-info > select {
+  border-bottom: 1px solid #ddd;
+}
+
+#user-pw + span {
+  text-align: right;
+}
+
+.form > .personal-info,
+.form > .tel-info,
+.form > .agreement-info {
+  display: grid;
+  grid-template-columns: 3.125rem 1fr;
+  border: 1px solid #ddd;
+}
+
+.form > .personal-info > div {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form > .personal-info > div > div {
+  display: flex;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  border: 1px solid #ddd;
+  padding: 0.125rem 1.25rem;
+  margin: 0.5rem 0;
+}
+
+input[type="radio"] + label:first-of-type {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+input[type="radio"] + label:last-of-type {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+input[type="radio"]:checked + label {
+  border: 1px solid greenyellow;
+  color: greenyellow;
+}
+
+.form > .tel-info,
+.form > .agreement-info {
+  border: 1px solid #ddd;
+}
+
+#user-mail {
+  /* grid-column: 2/4; */
+}
+
+#agree + label > span {
+  color: yellowgreen;
+}
