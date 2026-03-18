@@ -1,0 +1,115 @@
+body {
+  background-color: black;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: #f14c4c;
+}
+
+.translate {
+  /* 박스 이동 translate(x, y) */
+  transform: translate(100px, 100px);
+  background-color: antiquewhite;
+}
+
+.scale {
+  background-color: aqua;
+  /* 박스 크기 조정 scale(x, y) */
+  transform: scale(2, 2) translate(200px, 200px);
+}
+
+.rotate {
+  /* 박스 회전 rotate(회전각 deg, turn) */
+  /* transform: rotate(45deg); */
+  transform: rotate(0.125turn);
+}
+
+.invert {
+  background-color: coral;
+  /* transform: scale(-1, 1); */
+  transform: rotate(180deg);
+}
+
+.change-color {
+  transition: background-color 1s;
+}
+
+.change-color:hover {
+  background-color: white;
+}
+
+.change-scale {
+  transition:
+    transform 0.3s 0.3s,
+    background-color 0.3s;
+}
+
+.change-scale:hover {
+  background-color: violet;
+  transform: scale(2, 2);
+}
+
+img {
+  width: 100%;
+  /* height: 100%; */
+  vertical-align: bottom;
+}
+
+.change-rotate {
+  /* 0.5초간 애니메이션 진행. */
+  transition: transform 0.5s;
+}
+
+.change-rotate:hover {
+  /* 360도 회전 */
+  transform: rotate(1turn);
+}
+
+.animate-rotate {
+  overflow: hidden;
+}
+
+.animate-rotate:hover {
+  /* animation: cat-rotate 0.1s infinite linear; */
+  animation: cat-rotate-and-scale 1.5s infinite linear;
+}
+
+@keyframes cat-rotate-and-scale {
+  0% {
+    transform: rotate(0deg) scale(1, 1) translate(0, 0);
+    border-radius: 0px;
+  }
+  50% {
+    transform: rotate(180deg) scale(2, 2) translate(50px, 50px);
+    border-radius: 50px;
+  }
+  100% {
+    transform: rotate(360deg) scale(1, 1) translate(0, 0);
+    border-radius: 0px;
+  }
+}
+
+@keyframes cat-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hover-me {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.hover-me > img {
+  transition: transform 0.5s;
+}
+
+.hover-me:hover > img {
+  transform: scale(1.2, 1.2) rotate(5deg);
+}
