@@ -1,0 +1,8 @@
+ul {
+  list-style: none;
+}
+
+.list-item:hover {
+  background-color: brown;
+  color: white;
+}
