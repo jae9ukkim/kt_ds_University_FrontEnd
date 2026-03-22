@@ -1,3 +1,17 @@
+button,
+div,
+ul,
+li {
+  margin: 10px;
+}
+
+div,
+ul,
+li {
+  border: 1px solid black;
+  padding: 5px;
+}
+
 ul {
   list-style: none;
 }
