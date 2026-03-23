@@ -12,11 +12,25 @@ $().ready(function () {
       });
   });
 
+  // 처음부터 존재했던 ".package-button-area" DOM을 통해서
+  // 새롭게 생성된 "p.white-color" 에게 click 이벤트를 할당한다.
+  $(".package-button-area").on("click", "p.white-color", function () {
+    alert($(this).text());
+  });
+  // $(".package-button-area")
+  //   .find("p")
+  //   .on("click", function () {
+  //     alert($(this).text());
+  //   });
+
   $(".package-green-button").on("click", function () {
     // var vacationPrice = $(this).parent().parent().parent().data("price");
     var vacationPrice = $(this).closest(".package").data("price");
     var price = $("<p>");
     price.text("From $" + vacationPrice);
+    // price.on("click", function () {
+    //   alert($(this).text());
+    // });
 
     // 새롭게 만든 p 태그에게 inline style을 부여한다.
     // price.css({ color: "white" });
