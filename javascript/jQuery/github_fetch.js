@@ -33,6 +33,14 @@ window.onload = function () {
             });
           })(data[i].html_url);
 
+          var div = $("<div>");
+          div
+            .text(data[i].login)
+            .data("url", data[i].html_url)
+            .on("click", function () {
+              location.href = $(this).data("url");
+            });
+
           $(".posts").append(list).append(div);
         }
       });
